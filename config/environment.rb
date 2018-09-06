@@ -1,3 +1,4 @@
 require 'bundler/setup'
 Bundler.require
-require_all 'app'
+
+Dir["./app/models/*.rb"].each {|file| require file }
