@@ -1,5 +1,5 @@
 class RecipeCard
-    attr_reader :date, :user, :recipe, :rating, :note
+    attr_reader :date, :user, :recipe, :rating
 
     @@all = []
     def initialize(rating, user, date, recipe)
@@ -8,10 +8,6 @@ class RecipeCard
         @recipe = recipe
         @date = date
         @@all << self
-    end
-
-    def write_note(note)
-        @note = note
     end
     
     def self.all

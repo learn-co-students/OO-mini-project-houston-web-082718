@@ -17,6 +17,7 @@ berries = Ingredient.new('Berries')
 
 bob.declare_allergen(milk)
 bob.declare_allergen(berries)
+patty.declare_allergen(berries)
 
 bob.add_recipe_card(soup, Date.today.prev_day, 10)
 patty.add_recipe_card(cereal, Date.today.prev_day, 8)
@@ -25,8 +26,5 @@ patty.add_recipe_card(soup, Date.today.prev_day, 3)
 patty.add_recipe_card(cereal, Date.today, 1)
 
 cereal.add_ingredients([milk, flakes, sugar, berries])
-
-
-
 
 binding.pry

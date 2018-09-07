@@ -6,7 +6,9 @@ class User
         @name = name
         @@all << self
     end
-
+    # Iterates through recipecards to select all cards for 
+    # specific user instance, then uses the new array to iterate
+    # over and return only the recipe instance from the array.
     def recipes 
         RecipeCard.all.select do |recipe_card|
             recipe_card.user == self
@@ -15,7 +17,7 @@ class User
         end
     end
 
-    # objects_array.sort_by{ |obj| obj.attribute }.reverse
+    # 
     def top_three_recipes
         RecipeCard.all.select do |recipe_card|
             recipe_card.user == self
